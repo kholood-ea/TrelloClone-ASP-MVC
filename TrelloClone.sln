@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloClone", "TrelloClone.csproj", "{2223DD8B-CFB0-49EE-8048-4A65C7C639DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrelloClone.Tests", "..\TrelloClone.Tests\TrelloClone.Tests.csproj", "{A535761C-99B6-4F29-BDB7-F29D09DE0BC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2223DD8B-CFB0-49EE-8048-4A65C7C639DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2223DD8B-CFB0-49EE-8048-4A65C7C639DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2223DD8B-CFB0-49EE-8048-4A65C7C639DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2223DD8B-CFB0-49EE-8048-4A65C7C639DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A535761C-99B6-4F29-BDB7-F29D09DE0BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A535761C-99B6-4F29-BDB7-F29D09DE0BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A535761C-99B6-4F29-BDB7-F29D09DE0BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A535761C-99B6-4F29-BDB7-F29D09DE0BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D2929BC-0736-4992-AFA2-A29166F6ACF0}
+	EndGlobalSection
+EndGlobal
