@@ -2,5 +2,5 @@
 Trello App Simulation
 
 
-user:admin@admin.com
-password:password
+user : admin@admin.com <br>
+password : password
