@@ -18,24 +18,31 @@ namespace TrelloClone.Controllers
         // GET: ToDoes
         public ActionResult Index()
         {
-           
+
             return View();
         }
-        private IEnumerable<ToDo>GetMyToDoes()
+        private IEnumerable<ToDo> GetMyToDoes()
         {
             string currentUserId = User.Identity.GetUserId();
             ApplicationUser currentUser = db.Users.FirstOrDefault(
                 x => x.Id == currentUserId);
             IEnumerable<ToDo> myToDoes = db.ToDos.ToList().Where(x => x.User == currentUser);
+
+            //TODO: Consume the API and deserialize the JSON to the List<ToDo> object
+            // string url = "https://localhost:44354/api/ToDoesAPI/?currentUserId=" + currentUserId;
+
+
+            // IEnumerable<ToDo> myToDoes = null;
+
             int completedcount = 0;
             foreach (ToDo toDo in myToDoes)
             {
-                if(toDo.IsDone)
+                if (toDo.IsDone)
                 {
                     completedcount++;
                 }
             }
-            ViewBag.Percent =Math.Round(100f * ((float)completedcount / (float)myToDoes.Count()));
+            ViewBag.Percent = Math.Round(100f * ((float)completedcount / (float)myToDoes.Count()));
             return myToDoes;
 
 
@@ -43,8 +50,8 @@ namespace TrelloClone.Controllers
         //** to build the partial view created 
         public ActionResult BuildToDoTable()
         {
-            
-            return PartialView("_ToDoTable",GetMyToDoes());
+
+            return PartialView("_ToDoTable", GetMyToDoes());
         }
 
         // GET: ToDoes/Details/5
@@ -123,7 +130,7 @@ namespace TrelloClone.Controllers
             string currentUserId = User.Identity.GetUserId();
             ApplicationUser currentUser = db.Users.FirstOrDefault(
                 x => x.Id == currentUserId);
-            if (toDo.User!=currentUser)
+            if (toDo.User != currentUser)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
